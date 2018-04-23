@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample01
+  namespace: student-prod
+spec:
+  containers:
+   - name: httpd
+     image: httpd
+     resources:
+      requests:
+        memory: "64Mi"
+        cpu: "64m"

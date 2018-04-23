@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample01
+spec:
+  containers:
+  - name: httpd
+    image: httpd
+    volumeMounts:
+    - name: sampledb
+      mountPath: /opt
+  volumes:
+  - name: sampledb
+    emptyDir: {}

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample02
+spec:
+  containers:  
+   - name: httpd
+     image: raghudevops26/httpd
+     imagePullPolicy: Always
+     env:
+      - name: TOMCAT_IP
+        value: tomcat
+   - name: tomcat
+     image: raghudevops26/tomcat
+
