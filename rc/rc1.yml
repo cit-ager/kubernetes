@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: httpd
-        image: raghudevops26/httpd
+        image: raghudevops26/httpd:v2
         imagePullPolicy: Always 
         ports:
         - containerPort: 80
