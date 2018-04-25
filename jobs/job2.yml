@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: job2
+spec:
+  template:
+    spec:
+     containers:
+     - name: centos
+       image: centos
+       command:
+        - "sleep"
+        - "20"
+     restartPolicy: Never
