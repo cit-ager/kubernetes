@@ -1,0 +1,23 @@
+apiVersion: apps/v1beta1
+kind: Deployment 
+metadata:
+  name: rchttpd
+spec:
+  replicas: 4
+#  selector:
+#    app: httpd
+  template:
+    metadata:
+      labels:
+        app: httpd
+    spec:
+      containers:
+      - name: httpd
+        image: raghudevops26/httpd:v1
+        imagePullPolicy: Always 
+        ports:
+        - containerPort: 80
+        env:
+         - name: TOMCAT_IP
+           value: XYZ
+
